@@ -127,8 +127,10 @@ function kata07() {
 
     let newLotrCitiesArray = lotrCitiesArray.map((x) => x)
     let newArray = []
-    newArray[0] = newLotrCitiesArray[2]
-    newArray[1] = newLotrCitiesArray[4]
+
+    for (let i = 0; i < 3; i++){
+        newArray[i] = newLotrCitiesArray[i+2]
+    }
 
     showResult(newArray)
 
@@ -288,10 +290,10 @@ kata14()
 function kata15() {
 
     let newBestThing = bestThing
-    newBestThing = newBestThing.substring(0,14)
+    newBestThing = newBestThing.substring(newBestThing.length - 12)
 
     showResult(newBestThing)
-
+    
     return newBestThing
 }
 
